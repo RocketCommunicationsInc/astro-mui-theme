@@ -10,8 +10,14 @@ export const handleOwnerTheme = (astroTheme: Theme, ownerTheme: Theme, debug: bo
     // owner overrides
     ...astroTheme,
     ...ownerTheme,
+    components: {
+      // astro overrides
+      ...ownerTheme.components,
+      ...astroTheme.components,
+    },
     palette: {
       // astro overrides
+      ...ownerTheme.palette,
       ...astroTheme.palette,
     },
     shape: {
@@ -20,6 +26,7 @@ export const handleOwnerTheme = (astroTheme: Theme, ownerTheme: Theme, debug: bo
     },
     typography: {
       // astro overrides
+      ...ownerTheme.typography,
       ...astroTheme.typography,
     },
   };
