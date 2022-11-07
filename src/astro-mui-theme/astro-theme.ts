@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material';
 import type { TypographyStyleOptions } from '@mui/material/styles/createTypography';
-import type { Mode } from '../types/global';
+import type { AstroTokensOptions } from '../types/global';
 import type { AstroTheme } from '../types/astro-theme';
 import { astroTokens } from './astro-tokens';
 
@@ -15,8 +15,8 @@ declare module '@mui/material' {
   }
 }
 
-export const astroTheme = (mode: Mode = 'dark') => {
-  const astro = astroTokens(mode);
+export const astroTheme = (options: AstroTokensOptions) => {
+  const astro = astroTokens(options);
 
   return createTheme({
     astro,
@@ -77,45 +77,6 @@ export const astroTheme = (mode: Mode = 'dark') => {
       h4: astro.typography.h4,
       h5: astro.typography.h5,
       h6: astro.typography.h6,
-    },
-    /* -- Start default Mui component overrides -- */
-    components: {
-      MuiList: {
-        styleOverrides: {
-          root: {
-            backgroundColor: astro.color.background.surface.default,
-          },
-        },
-        defaultProps: {
-          disablePadding: true,
-        },
-      },
-      MuiListItemButton: {
-        defaultProps: {
-          disableRipple: true,
-          divider: true,
-        },
-        styleOverrides: {
-          root: {
-            '&:hover': {
-              backgroundColor: astro.color.background.surface.hover,
-            },
-            '&.Mui-selected': {
-              backgroundColor: astro.color.background.surface.selected,
-              boxShadow: `-4px 0 0 0 ${astro.color.border.interactive.default}`,
-              marginLeft: astro.spacing(1),
-              paddingLeft: astro.spacing(3),
-            },
-            '&.MuiListItemButton-divider': {
-              borderBottomWidth: astro.border.width.sm,
-              borderBottomStyle: 'solid',
-              borderBottomColor: astro.color.text.inverse,
-            },
-            paddingRight: astro.spacing(4),
-            paddingLeft: astro.spacing(4),
-          },
-        },
-      },
     },
   });
 };

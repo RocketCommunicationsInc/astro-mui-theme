@@ -3,10 +3,10 @@ import reference from '@astrouxds/tokens/dist/json/base.reference.json';
 import component from '@astrouxds/tokens/dist/json/base.component.json';
 import lightTheme from '@astrouxds/tokens/dist/json/theme.light.json';
 import type { AstroTheme } from '../types/astro-theme';
-import type { Mode } from '../types/global';
+import type { AstroTokensOptions } from '../types/global';
 
-export const astroTokens = (mode: Mode = 'dark'): AstroTheme['astro'] => {
-  const isLightTheme = mode === 'light';
+export const astroTokens = (options: AstroTokensOptions): AstroTheme['astro'] => {
+  const isLightTheme = options.mode === 'light';
 
   let theme: typeof lightTheme = {
     'gsb-icon-color-fill-default': component['gsb-icon-color-fill-default'],

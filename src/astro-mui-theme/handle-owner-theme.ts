@@ -10,21 +10,13 @@ export const handleOwnerTheme = (astroTheme: Theme, ownerTheme: Theme, debug: bo
     // owner overrides
     ...astroTheme,
     ...ownerTheme,
-    components: {
-      // owner overrides
-      ...ownerTheme.components,
-      // astro overrides
-      MuiList: {
-        ...astroTheme.components?.MuiList,
-      },
-      // astro overrides
-      MuiListItemButton: {
-        ...astroTheme.components?.MuiListItemButton,
-      },
-    },
     palette: {
       // astro overrides
       ...astroTheme.palette,
+    },
+    shape: {
+      // astro overrides
+      ...astroTheme.shape,
     },
     typography: {
       // astro overrides

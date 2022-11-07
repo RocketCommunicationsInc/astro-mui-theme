@@ -3,6 +3,10 @@ import type { AstroTheme } from './astro-theme';
 export type AstroThemeClasses = 'dark-theme' | 'light-theme';
 export type Mode = 'light' | 'dark';
 
+export type AstroTokensOptions = {
+  mode?: Mode;
+};
+
 // Add Astro's Theme to the owner's default theme
 declare module '@mui/material' {
   interface Theme extends AstroTheme {}

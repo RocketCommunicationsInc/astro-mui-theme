@@ -25,16 +25,16 @@ export interface AstroThemeProviderProps {
   theme?: Theme;
 }
 
-export const AstroThemeProvider: React.FC<AstroThemeProviderProps> = props => {
+export const AstroThemeProvider = (props: AstroThemeProviderProps) => {
   const { children, debug = false, mode, theme: ownerTheme } = props;
-  const [theme, setTheme] = React.useState<Theme>(astroTheme(mode));
+  const [theme, setTheme] = React.useState<Theme>(astroTheme({ mode }));
 
   React.useEffect(() => {
     if (debug) console.log('[THEME OUTPUT]:', theme);
-  }, [theme]);
+  }, [debug, theme]);
 
   React.useEffect(() => {
-    const astro = astroTheme(mode);
+    const astro = astroTheme({ mode });
 
     setTheme(() => {
       if (!ownerTheme) return astro;
