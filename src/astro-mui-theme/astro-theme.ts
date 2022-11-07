@@ -4,8 +4,6 @@ import type { AstroTokensOptions } from '../types/global';
 import type { AstroTheme } from '../types/astro-theme';
 import { astroTokens } from './astro-tokens';
 
-type Size = 'small' | 'medium' | 'large';
-
 // allow configuration in the createTheme() below
 declare module '@mui/material' {
   interface ThemeOptions extends AstroTheme {}
@@ -14,16 +12,6 @@ declare module '@mui/material' {
     body3?: TypographyStyleOptions;
     display1?: TypographyStyleOptions;
     display2?: TypographyStyleOptions;
-  }
-
-  interface StandardTextFieldProps {
-    size?: Size;
-  }
-  interface FilledTextFieldProps {
-    size?: Size;
-  }
-  interface OutlinedTextFieldProps {
-    size?: Size;
   }
 }
 
