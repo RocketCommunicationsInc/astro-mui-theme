@@ -76,100 +76,100 @@ export const astroTheme = (options: AstroTokensOptions) => {
       h5: astro.typography.h5,
       h6: astro.typography.h6,
     },
-    // components: {
-    //   MuiTextField: {
-    //     defaultProps: {
-    //       size: 'medium',
-    //       InputLabelProps: { shrink: true },
-    //     },
-    //     styleOverrides: {
-    //       root: {
-    //         '& label': {
-    //           transform: 'none',
-    //           transition: 'none',
-    //           color: astro.color.text.primary,
-    //           ...astro.typography.body1,
-    //           '&.Mui-focused, &.Mui-error': {
-    //             color: astro.color.text.primary,
-    //           },
-    //           '&.Mui-disabled': {
-    //             color: astro.color.text.placeholder,
-    //           },
-    //           '& + .MuiOutlinedInput-root': {
-    //             marginTop: astro.spacing(8),
-    //           },
-    //         },
-    //         '& .MuiOutlinedInput-root': {
-    //           backgroundColor: astro.color.background.base.default,
-    //           borderRadius: astro.radius.base,
-    //           '& fieldset': {
-    //             border: 'none',
-    //             boxShadow: `${astro.color.border.interactive.muted} 0 0 0 1px inset`,
-    //           },
-    //           '&:hover fieldset': {
-    //             boxShadow: `${astro.color.border.interactive.hover} 0 0 0 1px inset`,
-    //           },
-    //           '&.Mui-focused fieldset': {
-    //             boxShadow: `${astro.color.border.interactive.hover} 0 0 0 1px inset`,
-    //           },
-    //           '&.Mui-error fieldset': {
-    //             boxShadow: `${astro.color.border.error} 0 0 0 1px inset`,
-    //           },
-    //           '&.Mui-disabled fieldset': {
-    //             opacity: astro.opacity.disabled,
-    //             boxShadow: `${astro.color.border.interactive.muted} 0 0 0 1px inset`,
-    //           },
-    //         },
-    //         '& .MuiInputBase-input': {
-    //           '&.Mui-disabled': {
-    //             WebkitTextFillColor: astro.color.text.placeholder,
-    //           },
-    //         },
-    //         '& .MuiFormHelperText-root': {
-    //           margin: astro.spacing(2, 0, 0),
-    //           ...astro.typography.body2,
-    //           '&.Mui-disabled': {
-    //             color: astro.color.text.placeholder,
-    //           },
-    //         },
-    //         '& .MuiInputBase-adornedStart': {
-    //           paddingLeft: astro.spacing(2),
-    //         },
-    //         '& .MuiInputBase-adornedEnd': {
-    //           paddingRight: astro.spacing(2),
-    //         },
-    //       },
-    //     },
-    //     variants: [
-    //       {
-    //         props: { size: 'small' },
-    //         style: {
-    //           '& .MuiInputBase-input': {
-    //             height: '1.25rem',
-    //             padding: astro.spacing(1, 2),
-    //           },
-    //         },
-    //       },
-    //       {
-    //         props: { size: 'medium' },
-    //         style: {
-    //           '& .MuiInputBase-input': {
-    //             height: '1.25rem',
-    //             padding: astro.spacing(2),
-    //           },
-    //         },
-    //       },
-    //       {
-    //         props: { size: 'large' },
-    //         style: {
-    //           '& .MuiInputBase-input': {
-    //             height: '1.25rem',
-    //             padding: astro.spacing(3, 2),
-    //           },
-    //         },
-    //       },
-    //     ],
-    //   },
-    // },
+    components: {
+      MuiTextField: {
+        defaultProps: {
+          size: 'medium',
+          InputLabelProps: { shrink: true },
+        },
+        styleOverrides: {
+          root: {
+            '& label': {
+              transform: 'none',
+              transition: 'none',
+              color: astro.color.text.primary,
+              ...astro.typography.body1,
+              '&.Mui-focused, &.Mui-error': {
+                color: astro.color.text.primary,
+              },
+              '&.Mui-disabled': {
+                color: astro.color.text.placeholder,
+              },
+              '& + .MuiOutlinedInput-root': {
+                marginTop: astro.spacing(8),
+              },
+            },
+            '& .MuiOutlinedInput-root': {
+              backgroundColor: astro.color.background.base.default,
+              borderRadius: astro.radius.base,
+              '& fieldset': {
+                border: 'none',
+                boxShadow: `${astro.color.border.interactive.muted} 0 0 0 1px inset`,
+              },
+              '&:hover fieldset': {
+                boxShadow: `${astro.color.border.interactive.hover} 0 0 0 1px inset`,
+              },
+              '&.Mui-focused fieldset': {
+                boxShadow: `${astro.color.border.interactive.hover} 0 0 0 1px inset`,
+              },
+              '&.Mui-error fieldset': {
+                boxShadow: `${astro.color.border.error} 0 0 0 1px inset`,
+              },
+              '&.Mui-disabled fieldset': {
+                opacity: astro.opacity.disabled,
+                boxShadow: `${astro.color.border.interactive.muted} 0 0 0 1px inset`,
+              },
+            },
+            '& .MuiInputBase-input': {
+              '&.Mui-disabled': {
+                WebkitTextFillColor: astro.color.text.placeholder,
+              },
+            },
+            '& .MuiFormHelperText-root': {
+              margin: astro.spacing(2, 0, 0),
+              ...astro.typography.body2,
+              '&.Mui-disabled': {
+                color: astro.color.text.placeholder,
+              },
+            },
+            '& .MuiInputBase-adornedStart': {
+              paddingLeft: astro.spacing(2),
+            },
+            '& .MuiInputBase-adornedEnd': {
+              paddingRight: astro.spacing(2),
+            },
+          },
+        },
+        variants: [
+          {
+            props: { size: 'small' },
+            style: {
+              '& .MuiInputBase-input': {
+                height: '1.25rem',
+                padding: astro.spacing(1, 2),
+              },
+            },
+          },
+          {
+            props: { size: 'medium' },
+            style: {
+              '& .MuiInputBase-input': {
+                height: '1.25rem',
+                padding: astro.spacing(2),
+              },
+            },
+          },
+          {
+            props: { size: 'large' },
+            style: {
+              '& .MuiInputBase-input': {
+                height: '1.25rem',
+                padding: astro.spacing(3, 2),
+              },
+            },
+          },
+        ],
+      },
+    },
   });
 };
