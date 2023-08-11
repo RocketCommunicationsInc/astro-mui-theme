@@ -40,6 +40,16 @@ const astroTheme = ({ mode }: AstroThemeOptions) => {
 
   return createTheme({
     astro,
+    components: {
+      MuiTypography: {
+        defaultProps: {
+          variantMapping: {
+            body1Bold: 'p',
+            h1Bold: 'h1',
+          },
+        },
+      },
+    },
     palette: {
       background: {
         default: astro.ColorBackgroundBaseDefault,

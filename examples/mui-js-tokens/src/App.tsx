@@ -1,5 +1,15 @@
 import { useState } from 'react';
-import { AppBar, Card, CardContent, Container, Stack, Switch, Toolbar, Typography } from '@mui/material';
+import {
+  AppBar,
+  Card,
+  CardContent,
+  Container,
+  Stack,
+  Switch,
+  Toolbar,
+  Typography,
+} from '@mui/material';
+
 import AstroProvider from './AstroProvider';
 
 const App = () => {
@@ -33,6 +43,15 @@ const App = () => {
               <Card>
                 <CardContent>
                   <Typography variant='h1Bold'>Card H1 Bold Heading</Typography>
+                  <Typography variant='body1Bold'>
+                    Some Body 1 Bold Text
+                  </Typography>
+                  <Typography color='text.secondary'>
+                    Some Body 1 Text Color Secondary
+                  </Typography>
+                  <Typography color='text.disabled'>
+                    Some Body 1 Text Color Disabled
+                  </Typography>
                 </CardContent>
               </Card>
             ))}
