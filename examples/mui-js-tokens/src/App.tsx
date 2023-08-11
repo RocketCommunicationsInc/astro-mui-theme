@@ -1,12 +1,5 @@
 import { useState } from 'react';
-import {
-  AppBar,
-  Card,
-  Stack,
-  Switch,
-  Toolbar,
-  Typography,
-} from '@mui/material';
+import { AppBar, Card, CardContent, Container, Stack, Switch, Toolbar, Typography } from '@mui/material';
 import AstroProvider from './AstroProvider';
 
 const App = () => {
@@ -25,16 +18,26 @@ const App = () => {
           </Stack>
         </Toolbar>
       </AppBar>
-      <Card
+      <Container
         sx={{
-          p: (theme) => {
+          my: (theme) => {
             console.log(theme);
-            return 4;
+            return 8;
           },
         }}
       >
-        Some card
-      </Card>
+        <Stack spacing={4}>
+          {Array(6)
+            .fill(null)
+            .map(() => (
+              <Card>
+                <CardContent>
+                  <Typography variant='h1Bold'>Card H1 Bold Heading</Typography>
+                </CardContent>
+              </Card>
+            ))}
+        </Stack>
+      </Container>
     </AstroProvider>
   );
 };
