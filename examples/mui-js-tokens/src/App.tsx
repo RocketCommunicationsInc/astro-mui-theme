@@ -12,6 +12,7 @@ import {
 } from '@mui/material';
 
 import AstroProvider from './AstroProvider';
+import LoginForm from './LoginForm';
 
 const App = () => {
   const [isLight, setIsLight] = useState(false);
@@ -29,35 +30,32 @@ const App = () => {
           </Stack>
         </Toolbar>
       </AppBar>
-      <Container
-        sx={{
-          my: (theme) => {
-            console.log(theme);
-            return 8;
-          },
-        }}
-      >
+      <Container sx={{ my: 8 }}>
         <Stack spacing={4}>
-          <Stack spacing={3}>
-            <Typography variant='display1'>Display 1</Typography>
-            <Typography variant='display2'>Display 2</Typography>
-            <Typography variant='h1'>Heading 1</Typography>
-            <Typography variant='h1Bold'>Heading 1 Bold</Typography>
-            <Typography variant='h2'>Heading 2</Typography>
-            <Typography variant='h3'>Heading 3</Typography>
-            <Typography variant='h4'>Heading 4</Typography>
-            <Typography variant='h5'>Heading 5</Typography>
-            <Typography variant='h6'>Heading 6</Typography>
-            <Typography variant='body1'>Body 1</Typography>
-            <Typography variant='body1Bold'>Body 1 Bold</Typography>
-            <Typography variant='body2'>Body 2</Typography>
-            <Typography variant='body2Bold'>Body 2 Bold</Typography>
-            <Typography variant='body3'>Body 3</Typography>
-            <Typography variant='body3Bold'>Body 3 Bold</Typography>
-            <Typography variant='controlBody1'>Control Body</Typography>
-            <Typography variant='controlBody1Bold'>
-              Control Body 1 Bold
-            </Typography>
+          <Stack flexDirection='row' justifyContent='space-between'>
+            <Stack spacing={3}>
+              <Typography variant='display1'>Display 1</Typography>
+              <Typography variant='display2'>Display 2</Typography>
+              <Typography variant='h1'>Heading 1</Typography>
+              <Typography variant='h1Bold'>Heading 1 Bold</Typography>
+              <Typography variant='h2'>Heading 2</Typography>
+              <Typography variant='h3'>Heading 3</Typography>
+              <Typography variant='h4'>Heading 4</Typography>
+              <Typography variant='h5'>Heading 5</Typography>
+              <Typography variant='h6'>Heading 6</Typography>
+              <Typography variant='body1'>Body 1</Typography>
+              <Typography variant='body1Bold'>Body 1 Bold</Typography>
+              <Typography variant='body2'>Body 2</Typography>
+              <Typography variant='body2Bold'>Body 2 Bold</Typography>
+              <Typography variant='body3'>Body 3</Typography>
+              <Typography variant='body3Bold'>Body 3 Bold</Typography>
+              <Typography variant='controlBody1'>Control Body</Typography>
+              <Typography variant='controlBody1Bold'>
+                Control Body 1 Bold
+              </Typography>
+            </Stack>
+
+            <LoginForm />
           </Stack>
 
           <Divider />
